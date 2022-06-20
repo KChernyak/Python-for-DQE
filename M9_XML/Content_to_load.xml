@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+   <element>
+      <text>I want to rent 1-room apartment in Poltava</text>
+      <type>Privatead</type>
+      <valid_until>2022-07-21</valid_until>
+   </element>
+   <element>
+      <event_date>2022-09-13 17:00</event_date>
+      <location>KhaRKiv, Gorky PaRk</location>
+      <text>We are organizing a quiz to be held on the occasion of Testers Day.  JoIn uS anD haVE FuN</text>
+      <type>Event</type>
+   </element>
+   <element>
+      <city>World</city>
+      <text>Something happened today right here</text>
+      <type>News</type>
+   </element>
+   <element>
+      <city>UkRaiNe</city>
+      <text>The MaIn New is THaT nothing HaPPened and ThIs Is AWEsoME</text>
+      <type>News</type>
+   </element>
+   <element>
+      <city>UKraINe</city>
+      <text>Biggest PlaIN in The WORld 'MRIYA' wilL be rebuilt</text>
+      <type>News</type>
+   </element>
+   <element>
+      <text>I want to Sell A bIke</text>
+      <type>Privatead</type>
+      <valid_until>2022-08-01</valid_until>
+   </element>
+   <element>
+      <event_date>2022-08-31 18:30</event_date>
+      <location>Paris, Louvre</location>
+      <text>An exhibition of paintings by great artists will take place in May</text>
+      <type>Event</type>
+   </element>
+</root>

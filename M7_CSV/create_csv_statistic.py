@@ -1,0 +1,129 @@
+import os
+import sys
+import csv
+import pandas as pd
+import regex as re
+
+from previous_modules.file_data import FileData
+
+default_path = 'C:\Git\Python for DQE\M7_CSV'
+file_to_load = 'Content_to_load.txt'
+newsfeed = 'Newsfeed.txt'
+
+# Create CSV statistics class
+
+csv_words = 'word_count.csv'
+csv_letters = 'letters_statistic.csv'
+
+
+def sort_csv(csv_name, column_name):
+    df = pd.read_csv(csv_name, encoding="utf-8")
+    sorted_df = df.sort_values(column_name)
+    sorted_df.to_csv(csv_name, index=False)
+
+
+class CreateCSV:
+    def __init__(self, def_path, news_file):
+        self.def_path = def_path
+        self.news_file = news_file
+        words_dict = self.word_count()
+        self.create_words_csv(words_dict)
+        letters_list = self.create_letters_list(self.news_file)
+        count_of_letters = self.create_letters_count_list(letters_list)
+        self.create_stat_csv(count_of_letters)
+        print(f'Files {csv_words} and {csv_letters} were created.')
+
+    def word_count(self):
+        word_pattern = r"\p{L}+"
+        with open(f'{self.def_path}\\{self.news_file}') as text_file:
+            words_dict = {}
+            words = re.findall(word_pattern, text_file.read().lower())
+            for word in words:
+                if word not in words_dict.keys():
+                    words_dict[word] = 1
+                elif word in words_dict.keys():
+                    words_dict[word] += 1
+        return words_dict
+
+    @staticmethod
+    def create_words_csv(words_dict):
+        with open(csv_words, 'w', encoding="utf-8", newline='') as csv_words_collection:
+            header = ['Word', 'Count of repeating']
+            writer = csv.DictWriter(csv_words_collection, fieldnames=header)
+            writer.writeheader()
+            for key, value in words_dict.items():
+                writer.writerow({'Word': key, 'Count of repeating': value})
+        sort_csv(csv_words, 'Word')
+
+    @staticmethod
+    def create_letters_list(text_file):
+        letter_pattern = r"\p{L}"
+        letters = list()
+        with open(text_file, 'r', encoding="utf-8") as file:
+            text = file.read()
+            for lt in re.findall(letter_pattern, text):
+                letters.append(lt)
+        return letters
+
+    @staticmethod
+    def create_letters_count_list(letters_list):
+        count_of_letters = []
+        letters_list_len = len(letters_list)
+        for el in letters_list:
+            lwr = letters_list.count(el.lower())
+            upr = letters_list.count(el.upper())
+            prc = round(((lwr + upr) / letters_list_len) * 100, 3)
+            count_of_letters.append((el.lower(), lwr + upr, upr, prc))
+        count_of_letters = list(dict.fromkeys(count_of_letters))
+        return count_of_letters
+
+    @staticmethod
+    def create_stat_csv(count_of_letters):
+        with open(csv_letters, 'w', encoding="utf-8", newline='') as csv_stat:
+            header = ['Letter', 'Count_all', 'Count_uppercase', 'Percentage %']
+            writer = csv.DictWriter(csv_stat, fieldnames=header)
+            writer.writeheader()
+            for ltr, lwr, upr, prc in count_of_letters:
+                writer.writerow({'Letter': ltr, 'Count_all': lwr, 'Count_uppercase': upr, 'Percentage %': prc})
+        sort_csv(csv_letters, 'Letter')
+
+
+# File with newsfeed creation from content to load
+
+
+def choose_path():
+    path = input('Type path of the file or just hit Enter to choose default path')
+    if path == '':
+        return default_path
+    return path
+
+
+def locate_file(file_path, file_name):
+    try:
+        with open(f'{file_path}\\{file_name}', "r+", encoding='utf-8') as file:
+            return file.read()
+    except IOError:
+        print(f'File {file_path}\\{file_name} was not found!')
+        sys.exit()
+
+
+def write_to_file(text):
+    with open(newsfeed, 'a', encoding="utf-8") as f:
+        f.write(text)
+    print(text + 'Was added')
+
+
+def delete_source_file():
+    os.remove(file_to_load)
+
+
+def main():
+    file_path = choose_path()
+    file_content = locate_file(file_path, file_to_load)
+    file_data = FileData(file_content)
+    write_to_file(str(file_data))
+    delete_source_file()
+    CreateCSV(file_path, newsfeed)
+
+
+main()

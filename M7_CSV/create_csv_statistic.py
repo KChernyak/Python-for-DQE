@@ -6,7 +6,7 @@ import regex as re
 
 from previous_modules.file_data import FileData
 
-default_path = 'C:\Git\Python for DQE\M7_CSV'
+default_path = 'C:\Git\Personal_Git\Python for DQE\M7_CSV'
 file_to_load = 'Content_to_load.txt'
 newsfeed = 'Newsfeed.txt'
 

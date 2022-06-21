@@ -8,7 +8,7 @@ import xml.etree.ElementTree as ElementTree
 
 from previous_modules.file_data import FileData
 
-default_path = 'C:\Git\Python for DQE\M9_XML'
+default_path = 'C:\Git\Personal_Git\Python for DQE\M9_XML'
 txt_file = 'Content_to_load.txt'
 json_file = 'Content_to_load.json'
 xml_file = 'Content_to_load.xml'

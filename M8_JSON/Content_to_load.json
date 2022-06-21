@@ -6,8 +6,8 @@
   },
   {
     "type": "Event",
-    "text": "We are organizing a quiz to be held on the occasion of Testers Day. Join us and have fun",
-    "location": "Kharkiv, Gorky Park",
+    "text": "We are organizing a quiz to be held on the occasion of Testers Day.  JoIn uS anD haVE FuN",
+    "location": "KhaRKiv, Gorky PaRk",
     "event_date": "2022-09-13 17:00"
   },
   {
@@ -17,22 +17,22 @@
   },
   {
     "type": "News",
-    "text": "The Main new is that nothing happened and this is awesome",
-    "city": "Ukraine"
+    "text": "The MaIn New is THaT nothing HaPPened and ThIs Is AWEsoME",
+    "city": "UkRaiNe"
   },
   {
     "type": "News",
-    "text": "Biggest Plain in The world 'Mriya' will be rebuilt",
-    "city": "Ukraine"
+    "text": "Biggest PlaIN in The WORld MRIYA wilL be rebuilt",
+    "city": "UKraINe"
   },
   {
     "type": "Privatead",
-    "text": "I want to sell a bike",
+    "text": "I want to Sell A bIke",
     "valid_until": "2022-08-01"
   },
   {
     "type": "Event",
-    "text": "An exhibition of paintings by great artists will take place in August",
+    "text": "An exhibition of paintings by great artists will take place in May",
     "location": "Paris, Louvre",
     "event_date": "2022-08-31 18:30"
   }

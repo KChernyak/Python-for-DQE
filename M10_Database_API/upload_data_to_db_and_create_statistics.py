@@ -1,14 +1,16 @@
+import csv
 import json
 import os
 import sys
-import csv
+import xml.etree.ElementTree as ElementTree
+
 import pandas as pd
 import regex as re
-import xml.etree.ElementTree as ElementTree
 
 from previous_modules.file_data import FileData
 
-default_path = 'C:\Git\Python for DQE\M10_Database_API'
+
+default_path = 'C:\Git\Personal_Git\Python for DQE\M10_Database_API'
 txt_file = 'Content_to_load.txt'
 json_file = 'Content_to_load.json'
 xml_file = 'Content_to_load.xml'
@@ -142,8 +144,8 @@ def delete_source_file(file):
 
 def main():
     file_path = choose_path()
-    user_choice = input("t - for .txt file, j - for .json, x - for .xml. Choose one of the listed options, otherwise "
-                        "- exit from the program\n")
+    user_choice = input("t - for .txt file, j - for .json, x - for .xml. "
+                        "Choose one of the listed options, otherwise - exit from the program\n")
     if user_choice == 't':
         file_content = locate_file(file_path, txt_file)
         file_data = FileData(file_content, 't')

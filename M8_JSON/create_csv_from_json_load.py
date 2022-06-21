@@ -7,7 +7,7 @@ import regex as re
 
 from previous_modules.file_data import FileData
 
-default_path = 'C:\Git\Python for DQE\M8_JSON'
+default_path = 'C:\Git\Personal_Git\Python for DQE\M8_JSON'
 txt_file = 'Content_to_load.txt'
 json_file = 'Content_to_load.json'
 newsfeed = 'Newsfeed.txt'

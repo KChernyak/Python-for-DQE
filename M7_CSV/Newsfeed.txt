@@ -1,37 +1,37 @@
 PrivateAd --------------------
-I want to rent 1-room apartment in poltava
-Actual until: 2022-07-21, 44 days left
+I want to rent 1-room apartment in Poltava
+Actual until: 2022-07-21, 29 days left
 ------------------------------
 
 Event ------------------------
-We are organizing a quiz to be held on the occasion of testers day.  join us and have fun
-Where: Kharkiv, gorky park
+We are organizing a quiz to be held on the occasion of Testers Day.  JoIn uS anD haVE FuN
+Where: KhaRKiv, Gorky PaRk
 When: 2022-09-13 17:00:00
 ------------------------------
 
 News -------------------------
 Something happened today right here
-World, 2022-06-06 21:33
+World, 2022-06-21
 ------------------------------
 
 News -------------------------
-The main new is that nothing happened and this is awesome
-Ukraine, 2022-06-06 21:33
+The MaIn New is THaT nothing HaPPened and ThIs Is AWEsoME
+UkRaiNe, 2022-06-21
 ------------------------------
 
 News -------------------------
-Biggest plain in the world "mriya" will be rebuilt
-Ukrain, 2022-06-06 21:33
+Biggest PlaIN in The WORld MRIYA wilL be rebuilt
+UKraINe, 2022-06-21
 ------------------------------
 
 PrivateAd --------------------
-I want to sell a bike
-Actual until: 2022-08-01, 55 days left
+I want to Sell A bIke
+Actual until: 2022-08-01, 40 days left
 ------------------------------
 
 Event ------------------------
-An exhibition of paintings by great artists will take place in may
-Where: Paris, louvre
+An exhibition of paintings by great artists will take place in May
+Where: Paris, Louvre
 When: 2022-08-31 18:30:00
 ------------------------------
 

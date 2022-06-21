@@ -2,7 +2,7 @@ import os
 import sys
 from previous_modules.file_data import FileData
 
-default_path = 'C:\Git\Python for DQE\M6_Files_Module\content_to_load'
+default_path = 'C:\Git\Personal_Git\Python for DQE\M6_Files_Module\content_to_load'
 input_file_name = 'Content_to_load.txt'
 
 

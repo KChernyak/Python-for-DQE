@@ -2,6 +2,7 @@ import sys
 from datetime import datetime
 
 from previous_modules.task3_refactored import normalize_string_case
+from previous_modules.insert_to_db import PublicationsToDB
 sys.path.append('/')
 
 
@@ -9,6 +10,9 @@ sys.path.append('/')
 
 
 class Record:
+
+    def __init__(self):
+        self.db_record = list()
 
     def header(self):
         class_name = self.__class__.__name__
@@ -27,7 +31,9 @@ class News(Record):
         super().__init__()
         self.news_text = news_text
         self.city_name = city
-        self.publish_date = datetime.now().strftime("%Y-%m-%d %H:%M")
+        self.publish_date = datetime.now().strftime("%Y-%m-%d")
+        self.db_record = [self.news_text, self.city_name, self.publish_date]
+        PublicationsToDB(self.db_record, self.__class__.__name__)
         self.record = self.header() + '\n' + \
                       self.news_text + '\n' + \
                       self.city_name + ', ' + self.publish_date + '\n' + \
@@ -47,6 +53,8 @@ class PrivateAd(Record):
         if date_diff.days < 0:
             print(f"Looks like ad expired. Ad was not added")
             sys.exit()
+        self.db_record = [self.ad_text, str(self.ad_actual_until.strftime('%Y-%m-%d')), date_diff.days]
+        PublicationsToDB(self.db_record, self.__class__.__name__)
         self.record = self.header() + '\n' \
                       + self.ad_text + '\n' \
                       + f'Actual until: ' + str(self.ad_actual_until.strftime('%Y-%m-%d')) \
@@ -75,6 +83,8 @@ class Event(Record):
         if date_diff.days < 0:
             print(f"Looks like Event has already performed. Exiting")
             sys.exit()
+        self.db_record = [self.event_text, self.event_address, self.event_datetime]
+        PublicationsToDB(self.db_record, self.__class__.__name__)
         self.record = self.header() + '\n' + \
                       self.event_text + '\n' + \
                       f'Where: {self.event_address}' + '\n' + \

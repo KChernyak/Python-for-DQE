@@ -1,6 +1,6 @@
 PrivateAd --------------------
 I want to rent 1-room apartment in Poltava
-Actual until: 2022-07-21, 43 days left
+Actual until: 2022-07-21, 29 days left
 ------------------------------
 
 Event ------------------------
@@ -11,22 +11,22 @@ When: 2022-09-13 17:00:00
 
 News -------------------------
 Something happened today right here
-World, 2022-06-07 15:10
+World, 2022-06-21
 ------------------------------
 
 News -------------------------
 The MaIn New is THaT nothing HaPPened and ThIs Is AWEsoME
-UkRaiNe, 2022-06-07 15:10
+UkRaiNe, 2022-06-21
 ------------------------------
 
 News -------------------------
-Biggest PlaIN in The WORld 'MRIYA' wilL be rebuilt
-UKraINe, 2022-06-07 15:10
+Biggest PlaIN in The WORld MRIYA wilL be rebuilt
+UKraINe, 2022-06-21
 ------------------------------
 
 PrivateAd --------------------
 I want to Sell A bIke
-Actual until: 2022-08-01, 54 days left
+Actual until: 2022-08-01, 40 days left
 ------------------------------
 
 Event ------------------------
